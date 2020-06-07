@@ -2,8 +2,8 @@ const express = require('express');
 
 const routes = express.Router();
 
-const medicine = require('./controllers/MedicineController');
+const medicineController = require('./controllers/MedicineController');
 
-routes.get('/', medicine.index);
+routes.get('/', medicineController.index);
 
 module.exports = routes;

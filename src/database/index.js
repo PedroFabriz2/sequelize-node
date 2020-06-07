@@ -2,11 +2,11 @@ const Sequelize = require('sequelize');
 
 const dbConfig = require('../config/database');
 
-const medicines = require('../models/medicine');
+const Medicines = require('../models/medicine');
 
 const connection = new Sequelize(dbConfig);
 
-medicines.init(connection);
+Medicines.init(connection);
 
 module.exports = connection;
 
