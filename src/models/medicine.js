@@ -1,21 +1,16 @@
-const { Model } = require('sequelize');
+const { Model, DataTypes } = require('sequelize');
 
-class Medicine extends Model {
+class medicines extends Model {
     static init(sequelize){
         super.init({
-            substânica: DataTypes.STRING,
-            cnpj: DataTypes.STRING,
+            substancia: DataTypes.STRING,
             laboratorio: DataTypes.STRING,
-            codigoggrem: DataTypes.STRING,
-            registro: DataTypes.STRING,
-            ean1: DataTypes.STRING,
-            ean2: DataTypes.STRING,
-            ean3: DataTypes.STRING,
             produto: DataTypes.STRING,
         }, {
-            sequelize
+            sequelize,
+            freezeTableName: true
         })
     }
 }
 
-module.exports = Medicine;
+module.exports = medicines;
